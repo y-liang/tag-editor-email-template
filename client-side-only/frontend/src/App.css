@@ -1,39 +1,105 @@
 .App {
   text-align: center;
-  margin: 60px;
+  margin: 45px 30px;
   height: 100%;
+
+  font-size: medium;
+  color: #3e3e3e;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
   list-style: none;
+  font-size: x-small;
+  color: #5c5c5c;
 }
 
 textarea {
-  width: 300px;
+  border-style: none;
+  border-radius: 9px;
+  background-color: #eef4f9; /*#e1eaf1*/
+
+  width: 120px;
   height: 60px;
+
+  resize: none;
+}
+
+
+button, input[type="submit"], input[type="file"]  {
+  background-color: #dcebf4; 
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+input[type="submit"]:hover {
+  background-color: #dcebf4;
+}
+
+button {
+  background-color: white;
+  color: #3e3e3e;
+  border: 1px solid #90beed; /* #e4ecf4 */
+}
+
+button:disabled {
+  border-color: #a4a4a4;
+  color: #a4a4a4;
+  cursor: default;
+
+}
+
+button:not(:disabled):hover {
+  border-color: #e1eaf1;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 
 .main {
   height: 100%;
+  align-items: flex-end !important;
+}
+
+.grid {
   display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: calc(100vw / 30);;
 }
 
 
 .left {
-  overflow-y: scroll;
-  height: 1200px;
-  width: 600px;
+  width: 480px;
+
+  /* height:750px;
+  overflow-y: scroll; */
 }
 
+
 .right {
+  transform: scale(0.9);
+  width: 480px;
 }
 
 .flex {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .flex-col {
@@ -41,5 +107,38 @@ textarea {
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .App{
+    margin: 30px 15px;
+    font-size: small;
+
+  }
+
+  li {
+    font-size: x-small;
+  }
+  .left {
+    overflow-y: scroll;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  textarea {
+    width: calc(100vw / 3);
+    height: 30px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(100vw / 30);;
+  }
+  .right {
+    transform: scale(0.5);
+    margin-top: -210px;
+    margin-bottom: -240px;
+  }
 }

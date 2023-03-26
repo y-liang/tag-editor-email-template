@@ -4,7 +4,7 @@ import renderPreview from '../modifiers/renderPreview';
 import { PREVIEW_FIELDS, PREVIEW_FILES } from '../utils/constant';
 import Preview from './Preview';
 
-const Main = ({ type, isExample, hasJson }) => {
+const Main = ({ isPreset, hasJson }) => {
     let fileNames, fieldNames;
 
     fileNames = PREVIEW_FILES;
@@ -20,7 +20,7 @@ const Main = ({ type, isExample, hasJson }) => {
 
 
 
-    // add if isExample, file is from local path
+    // add if isPreset, file is from local path
     const handleFileChange = async (e) => {
         const file = e.target.files[0];
 
@@ -35,7 +35,7 @@ const Main = ({ type, isExample, hasJson }) => {
 
 
     const handleRefreshTemplate = async () => {
-        let contentString = await renderPreview({ isExample, hasJson, files, fields }); // one file only
+        let contentString = await renderPreview({ isPreset, hasJson, files, fields }); // one file only
         setTemplateContent(contentString);
     };
 
@@ -45,7 +45,7 @@ const Main = ({ type, isExample, hasJson }) => {
     const handleFieldChange = async (e) => {
         setFields({ ...fields, [e.target.name]: e.target.value.trim() });
 
-        let contentString = await renderPreview({ isExample, hasJson, files, fields });
+        let contentString = await renderPreview({ isPreset, hasJson, files, fields });
         setTemplateContent(contentString);
     };
 
@@ -54,7 +54,7 @@ const Main = ({ type, isExample, hasJson }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let contentString = await renderPreview({ isExample, hasJson, files, fields }); // one file only
+        let contentString = await renderPreview({ isPreset, hasJson, files, fields }); // one file only
 
         let blob = new Blob([contentString], { type: 'text/html' });
 
@@ -78,16 +78,24 @@ const Main = ({ type, isExample, hasJson }) => {
 
             <div className='left'>
                 <form onSubmit={handleSubmit} encType='multipart/form-data'>
-                    <h1>{type} template</h1>
-                    <button onClick={handleRefreshTemplate}>refresh template</button>
+                    <button type='button' onClick={handleRefreshTemplate}>Refresh Preview</button>
 
-                    {!isExample && <ul>
+                    <div>
+                        <input type='submit' value='Generate HTML' />
+                        <br />
+                        {url && <button type='button'><a href={url} download onClick={handleDownload}>
+                            Download
+                        </a></button>}
+
+                    </div>
+
+                    {!isPreset && <ul>
                         {fileNames.map((file, index) => (
                             <li key={index}>
                                 <label>
                                     Upload {file}:
                                     <input type='file' name={file} onChange={handleFileChange} />
-                                    <button onClick={handleRefreshTemplate} disabled={!files || !files[file]}>add template</button>
+                                    <button type='button' onClick={handleRefreshTemplate} disabled={!files || !files[file]}>add template</button>
                                 </label>
                             </li>
                         ))}
@@ -95,12 +103,12 @@ const Main = ({ type, isExample, hasJson }) => {
                     {hasJson && <label>
                         Upload Json File:
                         <input type='file' name='json' onChange={handleFileChange} />
-                        <button onClick={handleRefreshTemplate} disabled={!files || !files['json']}>add json</button>
+                        <button type='button' onClick={handleRefreshTemplate} disabled={!files || !files['json']}>add json</button>
                     </label>}
 
 
                     <h3>...</h3>
-                    <ul>
+                    <ul className='grid'>
                         {fieldNames.map((field, index) => (field !== 'break' ?
                             <li key={index} className='flex flex-col'>
                                 <label htmlFor={field}>
@@ -111,11 +119,7 @@ const Main = ({ type, isExample, hasJson }) => {
                             : <h3 key={index}> ... </h3>))}
                     </ul>
 
-                    <input type='submit' value='Submit' />
 
-                    {url && <a href={url} download onClick={handleDownload}>
-                        Download the file here
-                    </a>}
                 </form>
             </div>
             <div className='right'>

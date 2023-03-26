@@ -918,7 +918,7 @@ export const templateContentString = `
                                  <td height="10" style="line-height:10px;" class="height10"><span>&nbsp;</span></td>
                               </tr>
                            </table>
-                           <table cellpadding="0" cellspacing="0" width="500" class="width330">
+                           <table align="center" cellpadding="0" cellspacing="0" width="500" class="width330">
                               <tr>
                                  <th width="119" align="center" class="block width330">
                                     <a class="logo_link" href="">
@@ -955,7 +955,7 @@ export const templateContentString = `
                                  <td height="10" style="line-height:10px;" class="height10"><span>&nbsp;</span></td>
                               </tr>
                            </table>
-                           <table cellspacing="0" cellpadding="0">
+                           <table align="center" cellspacing="0" cellpadding="0">
                               <tr>
                                  <td height="1" style="line-height:1px;" bgcolor="#959595" width="500" class="width330"><span>&nbsp;</span></td>
                               </tr>

@@ -4,11 +4,11 @@ import Main from './pages/Main';
 
 function App() {
 
-  const [type, setType] = useState('preview');
+  // const [type, setType] = useState('preview');
 
-  const handleSelectChange = (e) => {
-    setType(e.target.value);
-  };
+  // const handleSelectChange = (e) => {
+  //   setType(e.target.value);
+  // };
 
 
   const [hasJson, setHasJson] = useState();
@@ -26,15 +26,16 @@ function App() {
 
   return (
     <div className='App'>
+      <h1>Preview Email Template</h1>
 
-      <label>
+      {/* <label>
         Pick a template to get started:
         <select value={type} onChange={handleSelectChange}>
           <option value='inventory'>inventory external</option>
           <option value='midweek'>midweek cut</option>
           <option value='preview'>preview</option>
         </select>
-      </label>
+      </label> */}
 
       <label>
         Add a data table with json
@@ -54,7 +55,7 @@ function App() {
 
 
 
-      <Main type={type} isExample={radio == "utilize"} hasJson={hasJson} />
+      <Main isPreset={radio == "utilize"} hasJson={hasJson} />
     </div>
   );
 }

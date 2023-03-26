@@ -3,11 +3,11 @@ import { templateContentString } from '../template/template.js';
 import { PREVIEW_FIELDS } from '../utils/constant.js';
 
 
-const renderPreview = async ({ isExample, hasJson, files, fields }) => {
+const renderPreview = async ({ isPreset, hasJson, files, fields }) => {
 
     /* template */
     let templateHtml;
-    if (isExample) {
+    if (isPreset) {
         templateHtml = templateContentString;
     } else {
         const reader = new FileReader();
