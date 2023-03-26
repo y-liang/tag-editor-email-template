@@ -55,7 +55,7 @@ const populateMidweek = async ({ source, target, footer }) => {
 
     // target - wrap button with a tag above
     let $tgt$ = load(targetHtml);
-    $tgt$('.cbR-image-fit-container2').children('img').each((i, el) => {
+    $tgt$('.image-fit-container').children('img').each((i, el) => {
         let link = `<a href=${ href[count++] }></a>`;
         // console.log(link, 'link');
         const $el = $tgt$(el);
@@ -66,7 +66,7 @@ const populateMidweek = async ({ source, target, footer }) => {
     // console.log($tgt$.html());
 
     // change logo to footer info
-    $tgt$('.cbR-image-aligncenter').children('div').replaceWith(footerHtml);
+    $tgt$('.image-aligncenter').children('div').replaceWith(footerHtml);
 
     return $tgt$.html();
 };

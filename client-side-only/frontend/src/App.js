@@ -1,44 +1,44 @@
 import { useState } from 'react';
 import './App.css';
-import Right from './pages/Right';
-// import Cleanup from './pages/Cleanup';
-import Left from './pages/Left';
+import Main from './pages/Main';
 
 function App() {
 
-  const [type, setType] = useState('demand');
+  const [type, setType] = useState('preview');
 
   const handleSelectChange = (e) => {
     setType(e.target.value);
   };
 
 
-  const [radio, setRadio] = useState();
+  const [hasJson, setHasJson] = useState();
+  const handleCheckboxChange = (e) => {
+    setHasJson(e.target.checked);
+  };
+
+
+  const [radio, setRadio] = useState('utilize');
 
   const handleRadioChange = (val) => {
     setRadio(val);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-
-
-  // }
-
 
   return (
     <div className='App'>
-      {/* <Cleanup /> */}
 
       <label>
         Pick a template to get started:
         <select value={type} onChange={handleSelectChange}>
           <option value='inventory'>inventory external</option>
           <option value='midweek'>midweek cut</option>
-          <option value='demand'>demand newsletter</option>
-          <option value='supply'>supply newsletter</option>
           <option value='preview'>preview</option>
         </select>
+      </label>
+
+      <label>
+        Add a data table with json
+        <input type="checkbox" onChange={handleCheckboxChange} />
       </label>
 
       <div onChange={e => handleRadioChange(e.target.value)}  >
@@ -54,10 +54,7 @@ function App() {
 
 
 
-      <div className='flex'>
-        <Left type={type} />
-        <Right />
-      </div>
+      <Main type={type} isExample={radio == "utilize"} hasJson={hasJson} />
     </div>
   );
 }

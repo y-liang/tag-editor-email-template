@@ -1,4 +1,4 @@
-export const template = `
+export const templateContentString = `
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -899,7 +899,9 @@ export const template = `
                         <td width="500" align="left" valign="top" class="width330" style="direction:ltr;">
                            <!-- preheader -->
                            <div style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:24px; color:#555555;" class="hide">
-                              <a class="preview_link" href="" style="color:#666666; text-decoration:underline;">view in browser</a>
+                              <a class="preview_link" href="" style="color:#666666; text-decoration:underline;">
+                                 <span class="preview_text">Preview Text</span>
+                              </a>
                            </div>
                            <!-- preheader -->
                            <!-- HEADER -->
@@ -980,7 +982,7 @@ export const template = `
                                           <tr>
                                              <td>
                                                 <a class="main_link" href="">
-                                                   <img class="main_image" src="/placeholder.jpg" width="500" style="border-radius: 5%;" />
+                                                   <img class="main_image" src="/placeholder.jpg" width="500" height="250" style="border-radius: 15px; object-fit:cover" />
                                                 </a>
                                              </td>
                                           </tr>
@@ -990,6 +992,15 @@ export const template = `
                                              <td>
                                                 <h2 class="main_title" dir="auto"> Main Title </h2>
                                                 <p class="main_text">Main Text</p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td height="12" style="line-height:12px;" class="height12"><span>&nbsp;</span></td>
+                                          </tr>
+                                          <tr>
+                                             <td>
+                                                <table class="table_content" style="width: 100%;">
+                                                </table>
                                              </td>
                                           </tr>
                                           <tr>
@@ -1204,8 +1215,7 @@ export const template = `
    </body>
 
 </html>
-<!--MsgId:PD_Stamps_Email_Reward_email_through_turing-->
-<!--TURING:true-->
+
 
 
 `; 
