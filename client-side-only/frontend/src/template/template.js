@@ -922,9 +922,10 @@ export const templateContentString = `
                               <tr>
                                  <th width="119" align="center" class="block width330">
                                     <a class="logo_link" href="">
-                                       <img class="logo_image" src="/placeholder.jpg" border="0" vspace="0" alt="" hspace="0" style="width: 100px; height: 50px; object-fit: cover;" />
+                                       <img class="logo_image" src="/placeholder.jpg" border="0" vspace="0" alt="" hspace="0" style="border-radius: 9px; width: 100px; height: 50px; object-fit: cover;" />
                                  </th>
-                                 <th width="371" align="right" class="block width330 aligncenter">
+                                 <!-- width="371" -->
+                                 <th width="471" align="right" class="block width330 aligncenter">
                                     <table cellspacing="0" cellpadding="0">
                                        <tr>
                                           <td height="1" style="line-height:1px;" class="height8">
@@ -932,10 +933,10 @@ export const templateContentString = `
                                           </td>
                                        </tr>
                                     </table>
-                                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#333333; font-weight:normal;">
+                                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:3; color:#333333; font-weight:normal;">
                                        <a class="menu_a_link" href="" style="color:#333333; text-decoration:none;">
                                           <span class="menu_a_title">Menu A Title</span>
-                                       </a> &nbsp;&nbsp;&nbsp;|&nbsp; <a class="menu_b_link" href="" style="color:#333333; text-decoration:none;">
+                                       </a> &nbsp;&nbsp;&nbsp;|&nbsp; <a class=" menu_b_link" href="" style="color:#333333; text-decoration:none;">
                                           <span class="menu_b_title">Menu B Title</span>
                                        </a>&nbsp;&nbsp;&nbsp;|&nbsp; <a class="menu_c_link" href="" style="color:#333333; text-decoration:none;">
                                           <span class="menu_c_title">Menu C Title</span>
@@ -990,10 +991,13 @@ export const templateContentString = `
                                        <table style="width: 100%;">
                                           <tr style="text-align:center;">
                                              <td>
-                                                <strong style="font-size: 24px; line-height:2;">
+                                                <strong style="font-size: x-large; line-height:3;">
                                                    <span class="main_title"> Main Title </span>
                                                 </strong>
-                                                <p class="main_text">Main Text</p>
+                                                <p class="main_text" style="font-size: medium; line-height:1.5;">
+                                                   Main Text: 
+                                                   Una motiva ad hoc faciendum est quod quattuor potentiae sunt mathematicae quattuor vectores. Ita, normae transmutationis normae adhibitae, si potentiae electricae et magneticae in uno compage inertiae referentiae cognoscuntur, possunt simpliciter computari in quolibet alio membro inertiae relationis.
+                                                </p>
                                              </td>
                                           </tr>
                                           <tr>
@@ -1014,22 +1018,22 @@ export const templateContentString = `
                                                    <tr style="text-align:center;">
                                                       <td>
                                                          <a class="icon_one_link" href="">
-                                                            <img class="icon_one_image" src="/placeholder.jpg" width="90" style="border-radius: 50%;" />
+                                                            <img class="icon_one_image" src="/placeholder.jpg" width="90" style="margin:auto; border-radius: 50%;" />
                                                          </a>
                                                       </td>
                                                       <td>
                                                          <a class="icon_two_link" href="">
-                                                            <img class="icon_two_image" src="/placeholder.jpg" width="90" style="border-radius: 50%;" />
+                                                            <img class="icon_two_image" src="/placeholder.jpg" width="90" style="margin:auto; border-radius: 50%;" />
                                                          </a>
                                                       </td>
                                                       <td>
                                                          <a class="icon_three_link" href="">
-                                                            <img class="icon_three_image" src="/placeholder.jpg" width="90" style="border-radius: 50%;" />
+                                                            <img class="icon_three_image" src="/placeholder.jpg" width="90" style="margin:auto; border-radius: 50%;" />
                                                          </a>
                                                       </td>
                                                       <td>
                                                          <a class="icon_four_link" href="">
-                                                            <img class="icon_four_image" src="/placeholder.jpg" width="90" style="border-radius: 50%;" />
+                                                            <img class="icon_four_image" src="/placeholder.jpg" width="90" style="margin:auto; border-radius: 50%;" />
                                                          </a>
                                                       </td>
                                                    </tr>

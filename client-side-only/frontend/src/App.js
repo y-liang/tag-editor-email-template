@@ -1,18 +1,26 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './pages/Header';
 import Main from './pages/Main';
+import OptionCards from './pages/OptionCards';
 
 function App() {
 
-  const [option, setOption] = useState(0);
+  // const [option, setOption] = useState(0);
+
+
+  const [selectedOption, setSelectedOption] = useState(0); // index 1 base
 
 
   return (
     <div className='App'>
-      <h1>Email Template Tag Editor</h1>
+      <Header />
 
 
-      <div onChange={e => setOption(e.target.value)}  >
+      <OptionCards selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
+
+
+      {/* <div onChange={e => setOption(e.target.value)}  >
         <label>
           <input type="radio" name="template" value={0} defaultChecked />
           Modify Template
@@ -29,9 +37,9 @@ function App() {
           <input type="radio" name="template" value={2} defaultChecked />
           Generate Data Table from JSON Array
         </label>
-      </div>
+      </div> */}
 
-      <Main option={option} />
+      <Main option={selectedOption} />
     </div >
   );
 }

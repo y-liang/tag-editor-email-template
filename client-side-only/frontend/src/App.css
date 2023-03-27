@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin: 45px 30px;
+  margin: 15px 30px;
   height: 100%;
 
   font-size: medium;
@@ -22,45 +22,8 @@ li {
   color: #5c5c5c;
 }
 
-textarea {
-  border-style: none;
-  border-radius: 9px;
-  background-color: #f8fafb; /*#e1eaf1*/
-
-  width: 120px;
-  height: 60px;
-
-  resize: none;
-}
-
-textarea:focus-visible {
-  outline: 1px solid var(--medium-color);
-}
 
 
-button, input[type="submit"], input[type="file"]  {
-  background-color: #dcebf4; 
-  border: none;
-  color: var(--dark-color);
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 9px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-}
-
-input[type="submit"]:hover {
-  background-color: #dcebf4;
-}
-
-button {
-  background-color: white;
-  color: #3e3e3e;
-  border: 1px solid #90beed; /* #e4ecf4 */
-}
 
 button:disabled {
   border-color: #a4a4a4;
@@ -85,18 +48,12 @@ a {
   align-items: flex-end !important;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: calc(100vw / 30);;
-}
+
 
 
 .left {
   width: 480px;
-
-  /* height:750px;
-  overflow-y: scroll; */
+  margin-top: 30px;
 }
 
 
@@ -105,19 +62,7 @@ a {
   width: 480px;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap-reverse;
-}
 
 
 
