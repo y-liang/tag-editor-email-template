@@ -4,59 +4,35 @@ import Main from './pages/Main';
 
 function App() {
 
-  // const [type, setType] = useState('preview');
-
-  // const handleSelectChange = (e) => {
-  //   setType(e.target.value);
-  // };
-
-
-  const [hasJson, setHasJson] = useState();
-  const handleCheckboxChange = (e) => {
-    setHasJson(e.target.checked);
-  };
-
-
-  const [radio, setRadio] = useState('utilize');
-
-  const handleRadioChange = (val) => {
-    setRadio(val);
-  };
+  const [option, setOption] = useState(0);
 
 
   return (
     <div className='App'>
-      <h1>Preview Email Template</h1>
+      <h1>Email Template Tag Editor</h1>
 
-      {/* <label>
-        Pick a template to get started:
-        <select value={type} onChange={handleSelectChange}>
-          <option value='inventory'>inventory external</option>
-          <option value='midweek'>midweek cut</option>
-          <option value='preview'>preview</option>
-        </select>
-      </label> */}
 
-      <label>
-        Add a data table with json
-        <input type="checkbox" onChange={handleCheckboxChange} />
-      </label>
-
-      <div onChange={e => handleRadioChange(e.target.value)}  >
+      <div onChange={e => setOption(e.target.value)}  >
         <label>
-          <input type="radio" name="template" value="utilize" defaultChecked />
-          utilize example template
+          <input type="radio" name="template" value={0} defaultChecked />
+          Modify Template
+          <span className='info'>Recommended</span>
         </label>
         <label>
-          <input type="radio" name="template" value="upload" />
-          upload a template
+          <input type="radio" name="template" value={1} aria-describedby="rules" />
+          Upload a Template
+          <div role="tooltip" id="rules">
+            Experimental, proceed with caution.
+          </div>
+        </label>
+        <label>
+          <input type="radio" name="template" value={2} defaultChecked />
+          Generate Data Table from JSON Array
         </label>
       </div>
 
-
-
-      <Main isPreset={radio == "utilize"} hasJson={hasJson} />
-    </div>
+      <Main option={option} />
+    </div >
   );
 }
 

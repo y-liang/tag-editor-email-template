@@ -1,50 +1,61 @@
 import { load } from 'cheerio';
 import { templateContentString } from '../template/template.js';
-import { PREVIEW_FIELDS } from '../utils/constant.js';
+import { PRESET_FIELDS } from '../utils/constant.js';
 
 
-const renderPreview = async ({ isPreset, hasJson, files, fields }) => {
+const renderPreview = async ({ option, files, fields }) => {
 
-    /* template */
-    let templateHtml;
-    if (isPreset) {
-        templateHtml = templateContentString;
-    } else {
-        const reader = new FileReader();
-        reader.readAsText(files['template']);
-        templateHtml = await (async () => {
+    /* JSON and HTML */
+    if (option == 2) {
+        const jsonReader = new FileReader();
+        const htmlReader = new FileReader();
+
+        jsonReader.readAsText(files['json']);
+        htmlReader.readAsText(files['html']);
+
+        const jsonPromise = new Promise((resolve, reject) => {
+            jsonReader.addEventListener('load', () => {
+                resolve(jsonReader.result); // this will then display a text file
+            });
+        });
+
+
+        const htmlPromise = new Promise((resolve, reject) => {
+            htmlReader.addEventListener('load', () => {
+                resolve(htmlReader.result); // this will then display a text file
+            });
+        });
+
+        const [jsonString, htmlString] = await Promise.all([jsonPromise, htmlPromise]);
+
+        const tableContent = arrayToTable(jsonString); // pass in json string
+
+        /* cheerio */
+        let $tpl$ = load(htmlString);
+
+        // add table content
+        $tpl$('.table_content').append(tableContent);
+        return $tpl$.html();
+    }
+
+    /* either modify or upload template */
+    const templateHtml = option == 0
+        ? templateContentString // preset template to modify
+        : await (async () => {
+            const reader = new FileReader();
+            reader.readAsText(files['template']);
             return new Promise((resolve, reject) => {
                 reader.addEventListener('load', () => {
                     resolve(reader.result); // this will then display a text file
                 });
             });
         })();
-    }
 
     /* cheerio */
     let $tpl$ = load(templateHtml);
 
-
-    /* table content */
-    if (hasJson) {
-        const reader = new FileReader();
-        reader.readAsText(files['json']);
-        const jsonString = await (async () => {
-            return new Promise((resolve, reject) => {
-                reader.addEventListener('load', () => {
-                    resolve(reader.result); // this will then display a text file
-                });
-            });
-        })();
-        const tableContent = arrayToTable(jsonString); // pass in json string
-
-        // add table content
-        $tpl$('.table_content').append(tableContent);
-    }
-
-
     /* field content */
-    let fieldNames = PREVIEW_FIELDS;
+    let fieldNames = PRESET_FIELDS;
 
     // field - class name - pass in data
     fieldNames.forEach(name => {
@@ -52,8 +63,7 @@ const renderPreview = async ({ isPreset, hasJson, files, fields }) => {
 
         if (fields[name]) {
             switch (type) {
-                case 'link':
-                    // link could be on image and button
+                case 'link':  // link could be on image and button
                     $tpl$(`.${ name }`).each((i, el) => {
                         const $el = $tpl$(el);
                         $el.attr('href', fields[name]);
@@ -78,7 +88,6 @@ const renderPreview = async ({ isPreset, hasJson, files, fields }) => {
     });
 
     return $tpl$.html();
-
 };
 
 

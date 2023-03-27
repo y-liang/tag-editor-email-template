@@ -5,10 +5,15 @@
 
   font-size: medium;
   color: #3e3e3e;
+
+  --primary-color: #e4f4fc;
+  --medium-color: #4683a1;
+  --dark-color: #404040;
 }
 
 ul {
   padding: 0;
+  line-height: 2;
 }
 
 li {
@@ -20,7 +25,7 @@ li {
 textarea {
   border-style: none;
   border-radius: 9px;
-  background-color: #eef4f9; /*#e1eaf1*/
+  background-color: #f8fafb; /*#e1eaf1*/
 
   width: 120px;
   height: 60px;
@@ -28,11 +33,15 @@ textarea {
   resize: none;
 }
 
+textarea:focus-visible {
+  outline: 1px solid var(--medium-color);
+}
+
 
 button, input[type="submit"], input[type="file"]  {
   background-color: #dcebf4; 
   border: none;
-  color: white;
+  color: var(--dark-color);
   padding: 5px 15px;
   text-align: center;
   text-decoration: none;
@@ -141,4 +150,41 @@ a {
     margin-top: -210px;
     margin-bottom: -240px;
   }
+}
+
+.info {
+  color: var(--medium-color);
+  background-color: var(--primary-color);
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: x-small;
+}
+
+
+
+
+
+
+
+
+/* tooltip */
+
+
+[role="tooltip"],
+.hidetooltip.hidetooltip.hidetooltip + [role="tooltip"] {
+  visibility: hidden;
+  position: relative;
+  top: -45px;
+  left: 2rem;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 3px;
+}
+[aria-describedby]:hover,
+[aria-describedby]:focus {
+  position: relative;
+}
+[aria-describedby]:hover + [role="tooltip"],
+[aria-describedby]:focus + [role="tooltip"] {
+  visibility: visible;
 }

@@ -1,24 +1,24 @@
 
-export const PREVIEW_FILES = ['template'];
-export const PREVIEW_FIELDS = [
-    'preview_link', 'preview_text',
+export const PRESET_FILES = ['template'];
+export const PRESET_FIELDS = [
+    'preview_link', 'preview_title',
     'break',
 
     'logo_link', 'logo_image',
     'break',
 
-    'nav_left_link', 'nav_left_title',
-    'nav_center_link', 'nav_center_title',
-    'nav_right_link', 'nav_right_title',
+    'menu_a_link', 'menu_a_title',
+    'menu_b_link', 'menu_b_title',
+    'menu_c_link', 'menu_c_title',
     'break',
 
     'main_link', 'main_image', 'main_title', 'main_text',
     'break',
 
-    'icon_one_link', 'icon_one_image', 'icon_one_title',
-    'icon_two_link', 'icon_two_image', 'icon_two_title',
-    'icon_three_link', 'icon_three_image', 'icon_three_title',
-    'icon_four_link', 'icon_four_image', 'icon_four_title',
+    'icon_a_link', 'icon_a_image', 'icon_a_title',
+    'icon_b_link', 'icon_b_image', 'icon_b_title',
+    'icon_c_link', 'icon_c_image', 'icon_c_title',
+    'icon_d_link', 'icon_d_image', 'icon_d_title',
     'break',
 
     'action_link', 'action_title',

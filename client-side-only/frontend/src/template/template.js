@@ -900,7 +900,7 @@ export const templateContentString = `
                            <!-- preheader -->
                            <div style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:24px; color:#555555;" class="hide">
                               <a class="preview_link" href="" style="color:#666666; text-decoration:underline;">
-                                 <span class="preview_text">Preview Text</span>
+                                 <span class="preview_title">Preview Title</span>
                               </a>
                            </div>
                            <!-- preheader -->
@@ -933,12 +933,12 @@ export const templateContentString = `
                                        </tr>
                                     </table>
                                     <div style="font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:18px; color:#333333; font-weight:normal;">
-                                       <a class="nav_left_link" href="" style="color:#333333; text-decoration:none;">
-                                          <span class="nav_left_title">Nav Left</span>
-                                       </a> &nbsp;&nbsp;&nbsp;|&nbsp; <a class="nav_center_link" href="" style="color:#333333; text-decoration:none;">
-                                          <span class="nav_center_title">Nav Center</span>
-                                       </a>&nbsp;&nbsp;&nbsp;|&nbsp; <a class="nav_right_link" href="" style="color:#333333; text-decoration:none;">
-                                          <span class="nav_right_title">Nav Right</span>
+                                       <a class="menu_a_link" href="" style="color:#333333; text-decoration:none;">
+                                          <span class="menu_a_title">Menu A Title</span>
+                                       </a> &nbsp;&nbsp;&nbsp;|&nbsp; <a class="menu_b_link" href="" style="color:#333333; text-decoration:none;">
+                                          <span class="menu_b_title">Menu B Title</span>
+                                       </a>&nbsp;&nbsp;&nbsp;|&nbsp; <a class="menu_c_link" href="" style="color:#333333; text-decoration:none;">
+                                          <span class="menu_c_title">Menu C Title</span>
                                        </a>
                                     </div>
                                     <table cellspacing="0" cellpadding="0">
@@ -990,7 +990,9 @@ export const templateContentString = `
                                        <table style="width: 100%;">
                                           <tr style="text-align:center;">
                                              <td>
-                                                <h2 class="main_title" dir="auto"> Main Title </h2>
+                                                <strong style="font-size: 24px; line-height:2;">
+                                                   <span class="main_title"> Main Title </span>
+                                                </strong>
                                                 <p class="main_text">Main Text</p>
                                              </td>
                                           </tr>
@@ -1036,16 +1038,16 @@ export const templateContentString = `
                                                    </tr>
                                                    <tr style="text-align:center;">
                                                       <td style="padding: 0px 10px;">
-                                                         <span class="icon_one_title" dir="auto">Icon One Title</span>
+                                                         <span class="icon_a_title" dir="auto">Icon A Title</span>
                                                       </td>
                                                       <td style="padding: 0px 10px;">
-                                                         <span class="icon_two_title" dir="auto">Icon Two Title</span>
+                                                         <span class="icon_b_title" dir="auto">Icon B Title</span>
                                                       </td>
                                                       <td style="padding: 0px 10px;">
-                                                         <span class="icon_three_title" dir="auto">Icon Three Title</span>
+                                                         <span class="icon_c_title" dir="auto">Icon C Title</span>
                                                       </td>
                                                       <td style="padding: 0px 10px;">
-                                                         <span class="icon_four_title" dir="auto">Icon Four Title</span>
+                                                         <span class="icon_d_title" dir="auto">Icon D Title</span>
                                                       </td>
                                                    </tr>
                                                 </table>
@@ -1110,7 +1112,7 @@ export const templateContentString = `
                                           <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-spacing: 0;">
                                              <tbody>
                                                 <tr>
-                                                   <td align="center" bgcolor="#e1eaf1" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #333333; display: block;">
+                                                   <td align="center" bgcolor="#e4f4fc" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; color: #333333; display: block;">
                                                       <a class="action_link" href="" style="color: #333333; font-size:16px; font-weight: bold; font-family: Arial, sans-serif; text-decoration: none; line-height:40px; height: 40px; width:240px; display:inline-block"><span class="action_title">Action Title</span></a>
                                                    </td>
                                                 </tr>
@@ -1130,23 +1132,6 @@ export const templateContentString = `
                                  <td height="19" style="line-height:19px;"><span>&nbsp;</span></td>
                               </tr>
                            </table>
-                           <!-- SUB BODY WIDGET -->
-                           <div id="scoped-content">
-                              <style type="text/css" scoped>
-                                 .fullstripe img {
-                                    width: 100% !important;
-                                    height: auto !important;
-                                 }
-                              </style>
-                              <table cellpadding="0" cellspacing="0" width="500" class="width330">
-                                 <tr>
-                                    <td width="500" align="center" class="block width330 fullstripe">
-                                       <pe-empty-widget></pe-empty-widget>
-                                    </td>
-                                 </tr>
-                              </table>
-                           </div>
-                           <!-- /SUB BODY WIDGET -->
                            <!-- SPACER -->
                            <table cellspacing="0" cellpadding="0">
                               <tr>
