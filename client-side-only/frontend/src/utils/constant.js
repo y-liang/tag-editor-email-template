@@ -32,9 +32,33 @@ export const PRESET_FIELDS = [
 ];
 
 
+export const OPTIONS = [
+    {
+        id: 0,
+        title: 'Customize the template',
+        description: 'To customize your template with different images, links and texts, you have to fill in the corresponding fields with the new values.',
+        status: 'Recommended'
+    },
+    {
+        id: 1,
+        title: 'Import a template from file',
+        description: 'To edit your own template, you need to upload it, specify the classes of the tags you want to change, and enter the relevant information.',
+        status: 'Experimental'
+    },
+    {
+        id: 2,
+        title: 'Create and add a table',
+        description: 'To generate a table in your template, provide the array json and make sure there is a tag with the "table_content" class where the table will appear.',
+        status: 'Only support five attributes, including one link, per data entry'
+    },
+];
 
 
 
+
+export function classNames(...classes) {
+    return classes.filter(Boolean).join(' ');
+}
 
 
 

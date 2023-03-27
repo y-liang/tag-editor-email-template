@@ -958,7 +958,7 @@ export const templateContentString = `
                            </table>
                            <table align="center" cellspacing="0" cellpadding="0">
                               <tr>
-                                 <td height="1" style="line-height:1px;" bgcolor="#959595" width="500" class="width330"><span>&nbsp;</span></td>
+                                 <td height="1" style="line-height:1px;" bgcolor="#dddddd" width="500" class="width330"><span>&nbsp;</span></td>
                               </tr>
                            </table>
                            <table cellspacing="0" cellpadding="0">
@@ -1146,8 +1146,8 @@ export const templateContentString = `
                            <table cellpadding="0" cellspacing="0" width="500" class="width330">
                               <tr>
                                  <td width="493" align="left" valign="top" class="width323">
-                                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; color:#333333;" class="font12 line16">
-                                       <div class="a-row" style="text-align: center;"><span class="term_text a-size-base" dir="auto">Term Text</span></div>
+                                    <div style="font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:16px; color:#999999;" class="font12 line16">
+                                       <div class="a-row" style="text-align: center;"><span class="term_text a-size-base" dir="auto">Term Text: Possunt simpliciter computari in quolibet alio membro inertiae relationis.</span></div>
                                     </div>
                                  </td>
                               </tr>
