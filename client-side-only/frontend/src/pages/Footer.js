@@ -18,7 +18,7 @@ const navigation = [
 
 export default function Footer() {
    return (
-      <footer className="bg-white">
+      <footer className="">
          <div className="mx-auto max-w-7xl pt-6 pb-12 px-6 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-6 md:order-2">
                {navigation.map((item) => (
@@ -31,7 +31,7 @@ export default function Footer() {
             <div className="mt-8 md:order-1 md:mt-0">
                <p className="text-center text-xs leading-5 text-slate-500">
                   {/* &#169;&nbsp;{new Date().getFullYear()}&nbsp; */}
-                  Made by <strong className="text-slate-700">yliang.net</strong> in Santa Monica, CA.
+                  Made by <strong className="text-slate-700">yliang.net</strong>
                </p>
             </div>
          </div>

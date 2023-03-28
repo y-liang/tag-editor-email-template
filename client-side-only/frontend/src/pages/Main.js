@@ -2,7 +2,7 @@ import { ArrowDownTrayIcon, ArrowPathIcon, ArrowSmallRightIcon, CheckIcon, PlusI
 import { useEffect, useState } from 'react';
 
 import renderPreview from '../modifiers/renderPreview';
-import { PRESET_FIELDS, PRESET_FILES } from '../utils/constant';
+import { PRESET_FIELDS } from '../utils/constant';
 import Preview from './Preview';
 
 const Main = ({ option }) => {
@@ -12,7 +12,7 @@ const Main = ({ option }) => {
     const [files, setFiles] = useState([]);
     const [fields, setFields] = useState([]);
 
-    const [tagNames, setTagNames] = useState(PRESET_FIELDS);
+    const [tagNames, setTagNames] = useState([]);
 
 
     // url to download the resulted file
@@ -22,8 +22,10 @@ const Main = ({ option }) => {
         if (option == 0) {
             setTagNames(PRESET_FIELDS);
         } else if (option == 1) {
-            setTagNames(tagNames);
+            setTagNames(['class_name_a', 'class_name_b', 'class_name_c', '...']);
         }
+
+        handleRefreshTemplate();
     }, [option]);
 
 
@@ -204,22 +206,24 @@ const Main = ({ option }) => {
                             </button>
                         </div>}
 
-                    <ul className='grid grid-cols-4 gap-3 mt-6'>
-                        {tagNames.map((tagName, index) => (tagName !== 'break' ?
-                            <li key={index} className='flex flex-col'>
-                                <label htmlFor={tagName} className="text-xxs font-normal leading-6 text-slate-400">
-                                    {tagName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                                </label>
-                                <textarea
-                                    name={tagName}
-                                    onChange={handleFieldChange}
-                                    className="bg-sky-50 w-28 h-16 text-xs rounded-lg px-2 py-1 resize-none focus-visible:outline-none focus-visible:bg-sky-100"
-                                />
 
-                            </li>
-                            : <h3 key={index}> ... </h3>))}
-                    </ul>
+                    {option !== 2 &&
+                        <ul className='grid grid-cols-4 gap-3 mt-6'>
+                            {tagNames.map((tagName, index) => (tagName !== 'break' ?
+                                <li key={index} className='flex flex-col'>
+                                    <label htmlFor={tagName} className="text-xxs font-normal leading-6 text-slate-400">
+                                        {tagName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                                    </label>
+                                    <textarea
+                                        name={tagName}
+                                        onChange={handleFieldChange}
+                                        className="bg-white w-28 h-16 text-xs rounded-lg px-2 py-1 resize-none focus-visible:outline-none focus-visible:bg-sky-100"
+                                    />
 
+                                </li>
+                                : <h3 key={index}> ... </h3>))}
+                        </ul>
+                    }
 
                 </form>
             </div>

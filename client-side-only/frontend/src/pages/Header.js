@@ -2,7 +2,7 @@
 
 export default function Header() {
    return (
-      <div className="bg-white py-4 px-6 sm:py-8 lg:px-8">
+      <div className="py-4 px-6 sm:py-8 lg:px-8">
          <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-normal leading-7 text-sky-600">
                No more tag-hopping to update content on your email templates

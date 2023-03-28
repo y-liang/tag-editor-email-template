@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <div className='App'>
+    <div className='App bg-gradient-to-r from-blue-50 to-cyan-50'>
       <Header />
       <OptionCards selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
       <Main option={selectedOption} />
