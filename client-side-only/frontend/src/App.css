@@ -3,12 +3,18 @@
   padding: 15px 30px;
   height: 100%;
 
+
   font-size: medium;
   color: #3e3e3e;
 
   --primary-color: #e4f4fc;
   --medium-color: #4683a1;
   --dark-color: #404040;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
 }
 
 ul {
@@ -69,7 +75,6 @@ a {
 
 @media screen and (max-width: 640px) {
   .App{
-    margin: 30px 15px;
     font-size: small;
 
   }

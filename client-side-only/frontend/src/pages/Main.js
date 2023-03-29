@@ -77,7 +77,7 @@ const Main = ({ option }) => {
     };
 
     return (
-        <div className='main flex flex-wrap'>
+        <div className='main flex flex-wrap justify-evenly'>
 
             <div className='left'>
                 <form onSubmit={handleSubmit} encType='multipart/form-data'>
@@ -107,7 +107,7 @@ const Main = ({ option }) => {
                             }
 
                         </div>
-                        <span className="ml-3 hidden sm:block">
+                        <span className="ml-3 sm:block">
                             <button
                                 type="button"
                                 className="my-2 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-normal text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
@@ -124,7 +124,7 @@ const Main = ({ option }) => {
                             <div className='flex flex-col items-end'>
                                 <div
                                     type="button"
-                                    className="my-2 inline-flex items-center rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                                    className="my-2 inline-flex items-center max-w-xs sm:max-w-md rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
                                 >
                                     <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
                                     <span className='font-normal text-slate-800'>
@@ -177,7 +177,7 @@ const Main = ({ option }) => {
                         <div className='flex flex-col items-end'>
                             <div
                                 type="button"
-                                className="my-2 inline-flex items-center rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                                className="my-2 inline-flex items-center max-w-xs sm:max-w-md rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
                             >
                                 <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
                                 <span className='font-normal text-slate-800'>
@@ -188,7 +188,7 @@ const Main = ({ option }) => {
 
                             <div
                                 type="button"
-                                className="my-2 inline-flex items-center rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+                                className="my-2 inline-flex items-center max-w-xs sm:max-w-md rounded-md bg-white border px-3 py-2 text-sm font-normal text-slate-400 shadow-sm hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
                             >
                                 <PlusIcon className="-ml-0.5 mr-1.5 h-5 w-5" aria-hidden="true" />
                                 <span className='font-normal text-slate-800'>
@@ -217,7 +217,7 @@ const Main = ({ option }) => {
                                     <textarea
                                         name={tagName}
                                         onChange={handleFieldChange}
-                                        className="bg-white w-28 h-16 text-xs rounded-lg px-2 py-1 resize-none focus-visible:outline-none focus-visible:bg-sky-100"
+                                        className="bg-white w-full h-full text-xs rounded-lg px-2 py-1 resize-none focus-visible:outline-none focus-visible:bg-sky-100"
                                     />
 
                                 </li>

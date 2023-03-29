@@ -983,7 +983,7 @@ export const templateContentString = `
                                           <tr>
                                              <td>
                                                 <a class="main_link" href="">
-                                                   <img class="main_image" src="/placeholder.jpg" width="500" height="250" style="border-radius: 15px; object-fit:cover" />
+                                                   <img class="main_image" src="/placeholder.jpg" style="height: 150px; width: 500px; border-radius: 15px; object-fit:cover" />
                                                 </a>
                                              </td>
                                           </tr>

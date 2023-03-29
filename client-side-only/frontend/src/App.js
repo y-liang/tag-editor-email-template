@@ -15,10 +15,12 @@ function App() {
 
   return (
     <div className='App bg-gradient-to-r from-blue-50 to-cyan-50'>
-      <Header />
-      <OptionCards selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
-      <Main option={selectedOption} />
-      <Footer />
+      <div className='wrapper'>
+        <Header />
+        <OptionCards selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
+        <Main option={selectedOption} />
+        <Footer />
+      </div>
     </div >
   );
 }
