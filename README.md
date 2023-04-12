@@ -142,23 +142,25 @@ Customize email templates with a complete overview of tags that have placeholder
 
 ## Summary
 
-- The Why
+- The _Why_
 
    The idea for this tool stems from my own experience working as a web designer, where one of my responsibilities was to develop email templates from the ground up and update them with current content on a weekly basis. This entailed repeatedly replacing images, links, and text. For more complex designs, the process of editing and updating email templates can be time-consuming and labor-intensive. Even with an email builder, it can be cumbersome to navigate. I realized that if there was a way to access and view all of the elements’ attributes, such as image sources and hyperlinks, it can help reduce the time and effort required.
 
 
-- The How
+- The _How_
 
    In the beginning, I build a command-line program with just Cheerio.js and Node.js to parse and manipulate HTML files. To have an easy-to-use interface, I then built a backend using Express and a frontend with React. Since file processing can be handled directly by the browser, eliminating the need for a backend. Upon further consideration of file handling security, I shifted my focus to developing only a web-based solution for what would the application that allows users to edit images, links, text, and titles by associating editable fields with the class names of HTML tags.
 
 
    > To customize a template with different images, links, and texts, fill in the corresponding fields with the new values.
+
    ![tag editor option a](/assets/optiona.gif)
 
    > To edit an existing template, upload the template, specify the classes of the tags to be changed, and enter the relevant information.
+
    ![tag editor option b](/assets/optionb.gif)
 
 
-- The What
+- The _What_
 
    The demo application offers three options for template customization. The first option allows users to personalize a pre-existing template through the predefined input fields. The second option enables users to upload their own template and specify class names for editable regions. The third option facilitates the creation of a data table within a template, complete with rows and columns, by user-provided HTML and JSON files. The application features a centralized location for all input fields for viewing and editing fields without having to navigate between tags and lines of code. Additionally, there is a preview of the rendered template that updates in real-time as changes are made.
