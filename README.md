@@ -6,7 +6,7 @@ Customize email templates with a complete overview of tags that have placeholder
 
 - https://editagle.dev.yliang.net/
 
-![tag editor](/public/demo.gif)
+![tag editor](./client-side-only/frontend/public/demo.gif)
 
 
 ## Features
@@ -15,11 +15,11 @@ Customize email templates with a complete overview of tags that have placeholder
 
 
 |               | Client and Server | Client Side Only |
-| ------------- |:-------------:|:-------------:|
-| The stack     | React.js for frontend and Express.js for backend   | React.js for frontend     |
-| Upload file   | middleware _Multer_     |element _input_ type _file_     |
-| Parse document    | on the _server_ side with Node.js `fs` module   | on the _client_ side with Web API `FileReader` object   |
-| Manipulate content      | library _Cheerio_    | library _Cheerio_   |
+| ------------- |:-------------|:-------------|
+| The Stack     | React.js for frontend and Express.js for backend   | React.js for frontend     |
+| Upload File   | middleware _Multer_     |element _input_ type _file_     |
+| Parse Document    | on the _server_ side with Node.js `fs` module   | on the _client_ side with Web API `FileReader` object   |
+| Manipulate Content      | library _Cheerio_    | library _Cheerio_   |
 
 <!--
 > While this application has two configurations, both utilize the _Cheerio_ library for parsing and manipulating documents.
@@ -91,7 +91,7 @@ Customize email templates with a complete overview of tags that have placeholder
 
 ### Document Parsing
 
-- Server-side Node.js `fs` module
+- Server-side Node.js `fs` Module
 
    ```
    // on the server
@@ -111,7 +111,7 @@ Customize email templates with a complete overview of tags that have placeholder
    ```
 
 
-- Client-side Web API `FileReader`
+- Client-side Web API `FileReader` Object
 
    ```
    const templateReader = new FileReader();
@@ -153,10 +153,10 @@ Customize email templates with a complete overview of tags that have placeholder
 
 
    > To customize a template with different images, links, and texts, fill in the corresponding fields with the new values.
-   ![tag editor option a](/public/optiona.gif)
+   ![tag editor option a](./client-side-only/frontend/public/optiona.gif)
 
    > To edit an existing template, upload the template, specify the classes of the tags to be changed, and enter the relevant information.
-   ![tag editor option b](/public/optionb.gif)
+   ![tag editor option b](./client-side-only/frontend/public/optionb.gif)
 
 
 - The What
