@@ -1076,6 +1076,18 @@ export const templateContentString = `
                                  <td height="13" style="line-height:13px;"><span>&nbsp;</span></td>
                               </tr>
                            </table>
+                           <!-- SPACER -->
+                           <table cellspacing="0" cellpadding="0" class="table_content">
+                              <tr>
+                                 <td height="13" style="line-height:13px;"><span>&nbsp;</span></td>
+                              </tr>
+                           </table>
+                           <!-- SPACER -->
+                           <table cellspacing="0" cellpadding="0">
+                              <tr>
+                                 <td height="13" style="line-height:13px;"><span>&nbsp;</span></td>
+                              </tr>
+                           </table>
                            <!-- ACTION BUTTON -->
                            <table cellpadding="0" cellspacing="0" align="center">
                               <tr>

@@ -30,9 +30,6 @@ router.get('/', (req, res) => {
 
 // inventory, midweek, west, east
 router.post('/:type', upload.any(), (req, res) => {
-    // console.log('param', req.params);
-    // console.log('files', req.files);
-    // console.log('body', req.body);
 
     const { type } = req.params;
     const fields = req.body; // an object with all fields key and value
