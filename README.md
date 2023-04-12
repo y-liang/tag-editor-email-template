@@ -6,7 +6,7 @@ Customize email templates with a complete overview of tags that have placeholder
 
 - https://editagle.dev.yliang.net/
 
-![tag editor](./client-side-only/frontend/public/demo.gif)
+![tag editor](/assets/demo.gif)
 
 
 ## Features
@@ -153,10 +153,10 @@ Customize email templates with a complete overview of tags that have placeholder
 
 
    > To customize a template with different images, links, and texts, fill in the corresponding fields with the new values.
-   ![tag editor option a](./client-side-only/frontend/public/optiona.gif)
+   ![tag editor option a](/assets/optiona.gif)
 
    > To edit an existing template, upload the template, specify the classes of the tags to be changed, and enter the relevant information.
-   ![tag editor option b](./client-side-only/frontend/public/optionb.gif)
+   ![tag editor option b](/assets/optionb.gif)
 
 
 - The What
